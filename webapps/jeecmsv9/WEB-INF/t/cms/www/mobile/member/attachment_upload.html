@@ -1,0 +1,27 @@
+<script type="text/javascript" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-265" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/mobile/member/attachment_upload.html">
+//上传附件
+function uploadAttachment(n) {
+	var af = $('#attachmentFile'+n);
+	//�?查是否�?�择了文�?
+	if(af.val()=='') {
+		$.alert("[@s.m 'global.prompt'/]",'未�?�中文件!');
+		return;
+	}
+	//将file移动至上传表�?
+	$('#attachmentContent').empty();
+	$('#attachmentContent').append(af);
+	//复制�?个file放至原处
+	$('#afc'+n).append(af.clone().attr('value',''));
+	$('#attachmentText'+n).attr('value','');
+	//修改属�??
+	af.attr('id','');
+	//其他表单
+	$('#attachmentNum').val(n);
+	$('#attachmentForm').submit();
+}
+</script>
+<form id="attachmentForm" action="o_upload_attachment.jspx" method="post" enctype="multipart/form-data" target="attachment_iframe" style="display:none;width:0px;height:0px;">
+<span id="attachmentContent"></span>
+<input type="hidden" id="attachmentNum" name="attachmentNum"/>
+</form>
+<iframe name="attachment_iframe" frameborder="0" border="0" style="display:none;width:0px;height:0px;"></iframe>

@@ -1,0 +1,5 @@
+02-Aug-2018 09:26:34.159 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+02-Aug-2018 09:26:34.550 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+02-Aug-2018 09:27:03.859 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'JeeCmsFront'
+02-Aug-2018 09:27:07.032 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'JeeCmsAdminApi'
+02-Aug-2018 09:27:09.630 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'JeeCmsMemberApi'

@@ -1,0 +1,27 @@
+<script type="text/javascript" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-289" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/mobile/member/media_upload.html">
+//上传附件
+function uploadMedia() {
+	var mf = $("#mediaFile");
+	//�?查是否�?�择了文�?
+	if(mf.val()=="") {
+		$.alert("[@s.m 'global.prompt'/]","没有选择文件�?");
+		return;
+	}
+	//将file移动至上传表�?
+	$("#mediaContent").empty();
+	$("#mediaContent").append(mf);
+	//复制�?个file放至原处
+	$("#mfc").append(mf.clone().attr('value',''));
+	//修改属�??
+	mf.attr("id","");
+	$("#mediaFileText").attr('value','');
+	//其他表单
+	$("#mediaFilename").val($("#origFilename").val());
+	$("#mediaForm").submit();
+}
+</script>
+<form id="mediaForm" action="o_upload_media.jspx" method="post" enctype="multipart/form-data" target="media_iframe" style="display:none;width:0px;height:0px;">
+<span id="mediaContent"></span>
+<input type="hidden" id="mediaFilename" name="filename"/>
+</form>
+<iframe name="media_iframe" frameborder="0" border="0" style="display:none;width:0px;height:0px;"></iframe>

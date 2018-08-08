@@ -1,0 +1,52 @@
+[#--
+文字列表向左滚动
+
+dateFormat: 日期格式；�?�java日期格式，如：yyyy-MM-dd�?
+showTitleStyle：显示标题样式；�?0：不显示�?1：显示�?�不能为�?
+useShortTitle: 是否使用�?短标题；�?0：不使用�?1：使用�?�不能为�?
+--]
+[#if !showTitleStyle?? || showTitleStyle==''][#assign showTitleStyle='1'/][/#if]
+[#if !useShortTitle?? || useShortTitle==''][#assign useShortTitle='1'/][/#if]
+[#if !target?? || target=''][#assign target='1'/][/#if]
+
+[#if !rollSpan?? || rollSpan==''][#assign rollSpan='1'/][/#if]
+[#if !rollSpeed?? || rollSpeed==''][#assign rollSpeed='20'/][/#if]
+
+[#if tag_list?size gt 0 || !emptyMsg??]
+[#assign RLID][@uuid/][/#assign]
+<div id="roll-${RLID}"[#if cssClass??] class="${cssClass}"[/#if] style="width:100%;overflow:hidden;${cssStyle!}" onmouseover="clearInterval(proll${RLID}.pevent)" onmouseout="proll${RLID}.pevent=setInterval(function(){proll${RLID}.roll.call(proll${RLID})},proll${RLID}.speed)" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-360" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_list/style_2-3.html">
+	<table width="100%" align="left" cellpadding="0" cellspacing="0" border="0"><tr>
+	<td id="roll-orig-${RLID}" style="white-space:nowrap;">
+	[#list tag_list as ctt]
+[#--日期--]
+[#if dateFormat??]
+${ctt.date?string(dateFormat)} [#rt/]
+[/#if]
+[#--链接--]
+[#if useShortTitle=='1'][#assign tit=ctt.stit/][#else][#assign tit=ctt.tit/][/#if]
+<a href="${ctt.url}" title="${ctt.tit}"[#if (ctt.target?? && ctt.target) || target=='1'] target="_blank"[/#if]>[#rt/]
+[#if showTitleStyle=='1']
+<span style="[#if ctt.titCol?has_content]color:${ctt.titCol};[/#if][#if ctt.titBold]font-weight:bold;[/#if]">[@text_cut s=tit len=titLen append=append/]</span>[#rt/]
+[#else]
+[@text_cut s=tit len=titLen append=append/][#rt/]
+[/#if]
+</a> &nbsp; [#rt/]
+	[/#list]
+	</td>
+	<td id="roll-copy-${RLID}" style="white-space:nowrap;"></td>
+	</tr></table>
+</div>
+<script type="text/javascript">
+var proll${RLID}=new Cms.LeftRoller("${RLID}",${rollSpeed},${rollSpan});
+</script>
+[#else]
+<div class="${emptyClass!'empty-body'}"[#if emptyStyle??] style="${emptyStyle}"[/#if]>${emptyMsg!}</div>
+[/#if]
+
+[#assign showTitleStyle=''/]
+[#assign useShortTitle=''/]
+[#assign target=''/]
+
+[#assign rollSpeed=''/]
+[#assign rollSpan=''/]
+

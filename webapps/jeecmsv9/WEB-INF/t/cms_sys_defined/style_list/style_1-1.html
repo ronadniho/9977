@@ -1,0 +1,32 @@
+[#--
+文字列表
+
+cssClass：最外层DIV的class样式；默认：'c1-body'�?
+cssStyle: �?外层DIV的style样式；默认：空�??
+dateClass: 日期的class样式；默认：空�??
+ctgClass: 类别的class样式；默认：空�??
+--]
+[#if !datePosition?? || datePosition==''][#assign datePosition='2'/][/#if]
+[#if !bottomLine?? || bottomLine==''][#assign bottomLine='0'/][/#if]
+[#if !ctgForm?? || ctgForm==''][#assign ctgForm='0'/][/#if]
+[#if !showTitleStyle?? || showTitleStyle==''][#assign showTitleStyle='1'/][/#if]
+[#if !useShortTitle?? || useShortTitle==''][#assign useShortTitle='1'/][/#if]
+[#if !target?? || target=''][#assign target='1'/][/#if]
+
+[#if tag_list?size gt 0 || !emptyMsg??]
+<div class="${cssClass!'c1-body'}"[#if cssStyle??] style="${cssStyle}"[/#if] data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-351" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_list/style_1-1.html">
+[#list tag_list as ctt]
+[#include "style_1-1_core.html"/]
+[/#list]
+</div>
+[#else]
+<div class="${emptyClass!'empty-body'}"[#if emptyStyle??] style="${emptyStyle}"[/#if]>${emptyMsg!}</div>
+[/#if]
+
+[#assign datePosition=''/]
+[#assign bottomLine=''/]
+[#assign ctgForm=''/]
+[#assign showTitleStyle=''/]
+[#assign useShortTitle=''/]
+[#assign target=''/]
+

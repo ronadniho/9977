@@ -1,0 +1,45 @@
+[#--
+图文列表
+
+picWidth: 图片宽度；�?�按百分比计算（如为24.9；即每个图片占�?�宽度的24.9%，每行可放四张图片）】不能为空�??
+picHeight: 每行图片显示高度；�?�按像素px计算】不能为空�??
+picFloat: 图片是否左浮动；�?0：否�?1：是】不能为空�??
+rightPadding: 图片右边距；【按像素px计算】不能为空�??
+
+showTitleStyle：显示标题样式；�?0：不显示�?1：显示�?�不能为�?
+useShortTitle: 是否使用�?短标题；�?0：不使用�?1：使用�?�不能为�?
+titLen: 标题长度；�?�英文字母按半个计算】为空则不截�?
+target: 是否新窗口打�?；�??0：原窗口�?1：新窗口】不能为�?
+--]
+[#if imgType?? && (imgType?string=="1"||imgType?string=="2")]
+	[#if imgType?string=="2"]
+		[#if ctt.imgUrl2??][#assign imgUrl=ctt.imgUrl2/][#else][#assign imgUrl=site.defImg/][/#if]
+	[#else]
+		[#if ctt.imgUrl??][#assign imgUrl=ctt.imgUrl/][#else][#assign imgUrl=site.defImg/][/#if]
+	[/#if]
+[#else]
+	[#if typeId?? && typeId?string!=""]
+		[#if ctt.imgUrl2??][#assign imgUrl=ctt.imgUrl2/][#else][#assign imgUrl=site.defImg/][/#if]
+	[#else]
+		[#if ctt.imgUrl??][#assign imgUrl=ctt.imgUrl/][#else][#assign imgUrl=site.defImg/][/#if]
+	[/#if]
+[/#if]
+<dl style="margin:0;padding:0;[#if picWidth!='']width:${picWidth}%;[/#if][#if picHeight!='']height:${picHeight}px;[/#if][#if picFloat=='1']float:left;[/#if]padding-right:${rightPadding}px;text-align:center;" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-354" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_list/style_1-2_core.html">
+	<dd style="margin-left:0;">[#rt/]
+		<a href="${ctt.url}" title="${ctt.tit?html}"[#if (ctt.target?? && ctt.target) || target=='1'] target="_blank"[/#if]>[#t/]
+			<img src="${imgUrl}" style="[#if picHeight!='']height:${picHeight}px;[/#if]" alt="${ctt.tit?html}" border="0"/>[#t/]
+		</a>[#t/]
+	</dd>[#lt/]
+	[#if !noTitle?? || noTitle!="1"]
+	<dt style="padding:0 3px;">[#rt/]
+		[#if useShortTitle=='1'][#assign tit=ctt.stit/][#else][#assign tit=ctt.tit/][/#if]
+		<a href="${ctt.url}" title="${ctt.tit?html}"[#if (ctt.target?? && ctt.target) || target=='1'] target="_blank"[/#if]>[#t/]
+		[#if showTitleStyle=='1']
+		<span style="[#if ctt.titCol?has_content]color:${ctt.titCol};[/#if][#if ctt.titBold]font-weight:bold;[/#if]">[@text_cut s=tit len=titLen append=append/]</span>[#rt/]
+		[#else]
+		[@text_cut s=tit len=titLen append=append/][#rt/]
+		[/#if]
+		</a>[#t/]
+	</dt>[#lt/]
+	[/#if]
+</dl>

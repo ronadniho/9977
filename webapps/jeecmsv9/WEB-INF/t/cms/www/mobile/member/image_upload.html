@@ -1,0 +1,64 @@
+<script type="text/javascript" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-284" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/mobile/member/image_upload.html">
+//上传图片
+function upload(n) {
+	var of = $("#uploadFile"+n);
+	//�?查是否�?�择了图�?
+	if(of.val()=="") {
+		alert('没有选择图片!');
+		return;
+	}
+	//将file移动至上传表�?
+	$("#fileContent").empty();
+	$("#fileContent").append(of);
+	//复制�?个file放至原处
+	$("#ufc"+n).append(of.clone().attr("value",""));
+	//修改属�??
+	of.attr("id","");
+	of.attr("name","uploadFile");
+	//其他表单
+	$("#ufFileName").val($("#fileName"+n).val());
+	$("#ufWidth").val($("#zoomWidth"+n).val());
+	$("#ufHeight").val($("#zoomHeight"+n).val());
+	//先清�?
+	$("#ufMark").val("");
+	$("#ufMark").val($("#mark"+n).val());
+	$("#uploadNum").val(n);
+	$("#uploadForm").submit();
+}
+//剪裁图片
+function imgCut(n) {
+	if($("#uploadImgPath"+n).val()=="") {
+		alert('没有选择图片!');
+		return;
+	}
+	var url = "v_image_area_select.jspx?uploadNum="+n+"&imgSrcPath="
+		+$("#uploadImgPath"+n).val()+"&zoomWidth="+$("#zoomWidth"+n).val()+"&zoomHeight="+$("#zoomHeight"+n).val();
+	window.open(url,"imgcut","height=550, width=1000, top=0, left=0, toolbar=no, menubar=no, scrollbars=auto, resizable=yes,location=no, status=no");
+}
+//预览图片
+function previewImg(n) {
+	var img = $("#uploadImgPath"+n).val();
+	if(img!="") {
+		if(img.indexOf("?")==-1) {
+			$("#preImg"+n).attr("src",img+"?d="+new Date()*1);
+		} else {
+			$("#preImg"+n).attr("src",img+"&d="+new Date()*1);
+		}
+		if(!$("#preImg"+n).attr("noResize")) {
+			$("#preImg"+n).css("width","auto");
+			$("#preImg"+n).css("height","auto");
+		}
+	} else {
+		$("#preImg"+n).removeAttr("src");		
+	}
+}
+</script>
+<form id="uploadForm"  action="o_upload_image.jspx" method="post"  enctype="multipart/form-data" target="hiddenIframe" style="display:none;width:0px;height:0px;">
+<span id="fileContent"></span>
+<input id="ufWidth" type="hidden" name="zoomWidth"/>
+<input id="ufHeight" type="hidden" name="zoomHeight"/>
+<input id="ufFileName" type="hidden" name="fileName"/>
+<input id="ufMark" type="hidden" name="mark"/>
+<input id="uploadNum" type="hidden" name="uploadNum"/>
+</form>
+<iframe name="hiddenIframe" frameborder="0" border="0" style="display:none;width:0px;height:0px;"></iframe>

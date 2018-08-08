@@ -1,0 +1,153 @@
+
+<div id="gray" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-84" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/default/include/login.html"></div>
+<div class="popup" id="popup">
+  <div class="top_nav clearfix" id='top_nav'>
+    <span>用户登录</span><a class="guanbi"></a>
+  </div>
+  <form id="jvForm" action="${base}/login.jspx" method="post">
+  <div class="login-box">
+    <div class="register"><a href="${base}/register.jspx">新用户注�?</a></div>
+      <div class="username-con"><i></i><input id="username" name="username" class="login-input" type="text" placeholder="用户�?"></div>
+      <div class="password-con"><i></i><input id="password" name="password" class="password-input" type="password" placeholder="密码"></div>
+    <div class="login-rem clearfix">
+      <div class="next-day"><input type="checkbox" class="login-checkbox">下次自动登录</div>
+      <a>忘记密码</a>
+    </div>
+    <input type="submit" class="login-btn" value="�? �?">
+  </div>
+  <div class="quick">
+    <p>�?键登�?</p>
+    <div class="quick-list">
+      
+      <a class="quick-qq" id="qqLoginBtn" title="用QQ账号登录"></a>
+      <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="${site.config.qqID!}" data-redirecturi="http://${site.domain}/public_auth.jspx" charset="utf-8"></script>
+					<script type="text/javascript">
+						//插入按钮的节点qqLoginBtn id
+					    QC.Login({btnId:"qqLoginBtn",size: "A_M"}, function(reqData, opts){//登录成功
+					       //根据返回数据，更换按钮显示状态方�?
+					       var dom = document.getElementById(opts['btnId']),
+					       _logoutTemplate=[
+					            //头像
+					         //   '<span><img src="{figureurl}" class="{size_key}"/></span>',
+					            //昵称
+					            '<span>{nickname}</span>',
+					            //�?�?
+					            '<span><a href="javascript:QC.Login.signOut();">�?�?</a></span>'    
+					       ].join("");
+					       dom && (dom.innerHTML = QC.String.format(_logoutTemplate, {
+					           nickname : QC.String.escHTML(reqData.nickname), //做xss过滤
+					           figureurl : reqData.figureurl
+					       }));
+					       var userId=null;
+                           [#if user??]
+                           userId="${user.id}";
+                           [/#if]
+                           if(QC.Login.check()&&userId==null){
+                                     QC.Login.signOut();          
+                           }
+					   });
+					 </script>
+     
+      <a class="quick-tx" id="qqwebo_login_btn" title="用腾讯微博账号登�?"></a>
+      <script type="text/javascript" src="http://mat1.gtimg.com/app/openjs/openjs.js"></script>
+                    	<script type="text/javascript">
+                    		T.init({
+                    		    appkey: ${site.config.qqWeboID!}, 
+                    		    autoclose:false,
+                    		    callbackurl:"http://${site.domain}/public_auth.jspx"
+                    		});
+                    		 function logout(){
+                                 T.logout(function (loginStatus) { // 登出用户
+			    					// 登录成功
+								});
+                			}
+                    		$(function() {
+                        		$("#qqwebo_login_btn").click(function(){
+                        			T.login(function (loginStatus) { // 弹出登录窗口
+       							     // 本次登录成功
+       							       $.cookie("qqWeboId",loginStatus.openid);
+       							 	},function (error) {
+       							 	});
+                            	});
+                    		});
+						</script>
+	
+      
+      <a class="quick-sina" id="wb_connect_btn" title="用新浪微博账号登�?"></a>
+      <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=${site.config.sinaID!}" type="text/javascript" charset="utf-8"></script>
+						<script type="text/javascript">
+						 WB2.anyWhere(function(W){
+						 W.widget.connectButton({
+						  id: "wb_connect_btn",
+						  type: '3,2',
+						  callback : {
+						   login:function(o){
+						    //登录成功之后执行
+						    location="${base}/public_auth.jspx";
+						   },
+						   logout:function(){
+						    //�?出之后执行�??出本地用�?
+      						location="${base}/logout.jspx?returnUrl=/";
+						   }
+						  }
+						 });
+						});
+						</script>
+      
+    </div>
+  </div>
+  </form>	
+</div>
+<script type="text/javascript">
+//窗口效果
+//点击登录class为tc 显示
+$(".tc").click(function(){
+	$("#gray").show();
+	$("#popup").show();//查找ID为popup的DIV show()显示#gray
+	tc_center();
+});
+//点击关闭按钮
+$("a.guanbi").click(function(){
+	$("#gray").hide();
+	$("#popup").hide();//查找ID为popup的DIV hide()隐藏
+})
+
+//窗口水平居中
+$(window).resize(function(){
+	tc_center();
+});
+
+function tc_center(){
+	var _top=($(window).height()-$(".popup").height())/2;
+	var _left=($(window).width()-$(".popup").width())/2;
+	
+	$(".popup").css({top:_top,left:_left});
+}	
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+
+	$(".top_nav").mousedown(function(e){ 
+		$(this).css("cursor","move");//改变鼠标指针的形�? 
+		var offset = $(this).offset();//DIV在页面的位置 
+		var x = e.pageX - offset.left;//获得鼠标指针离DIV元素左边界的距离 
+		var y = e.pageY - offset.top;//获得鼠标指针离DIV元素上边界的距离 
+		$(document).bind("mousemove",function(ev){ //绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，�?以要用doucment的事件，而不用DIV元素的事�? 
+		
+			$(".popup").stop();//加上这个之后 
+			
+			var _x = ev.pageX - x;//获得X轴方向移动的�? 
+			var _y = ev.pageY - y;//获得Y轴方向移动的�? 
+		
+			$(".popup").animate({left:_x+"px",top:_y+"px"},10); 
+		}); 
+
+	}); 
+
+	$(document).mouseup(function() { 
+		$(".popup").css("cursor","default"); 
+		$(this).unbind("mousemove"); 
+	});
+}) 
+</script>

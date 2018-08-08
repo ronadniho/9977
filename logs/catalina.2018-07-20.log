@@ -1,0 +1,422 @@
+20-Jul-2018 13:32:41.381 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 13:32:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 13:32:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 13:32:41.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 13:32:41.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:41.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:41.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 13:32:41.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 13:32:41.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 13:32:41.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:41.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:41.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 13:32:41.387 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 13:32:41.387 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 13:32:41.966 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 13:32:43.237 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:32:43.249 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:32:43.270 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-apr-8009"]
+ java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+20-Jul-2018 13:32:43.285 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+20-Jul-2018 13:32:43.286 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 3155 ms
+20-Jul-2018 13:32:43.364 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 13:32:43.364 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 13:32:43.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 13:32:45.216 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 13:32:45.217 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 13:32:45.217 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 13:32:45.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 13:32:45.219 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:45.220 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:45.220 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 13:32:45.220 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 13:32:45.221 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 13:32:45.221 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:45.221 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:32:45.221 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 13:32:45.222 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 13:32:45.223 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 13:32:45.808 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 13:32:45.912 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:32:45.920 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-apr-9977"]
+ java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+20-Jul-2018 13:32:45.924 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-9977]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-9977]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+20-Jul-2018 13:32:45.926 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:32:45.929 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-apr-8009"]
+ java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+20-Jul-2018 13:32:45.929 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:869)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:580)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:603)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.lang.Exception: Socket bind failed: [730048] ?????????б┴???(з┐?иж/???????/???)????ик??
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:750)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+20-Jul-2018 13:32:45.931 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1026 ms
+20-Jul-2018 13:32:45.954 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 13:32:45.954 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 13:32:45.963 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 13:33:17.916 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 13:33:25.163 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 13:33:42.792 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 59,348 ms
+20-Jul-2018 13:33:42.833 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:33:42.940 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 59654 ms
+20-Jul-2018 13:33:42.941 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+ java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:438)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:717)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:351)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:485)
+
+20-Jul-2018 13:33:42.942 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:33:42.997 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:33:42.997 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+20-Jul-2018 13:33:44.126 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jeecmsv9] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-Jul-2018 13:33:44.127 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jeecmsv9] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Timer.java:552)
+ java.util.TimerThread.run(Timer.java:505)
+20-Jul-2018 13:33:44.128 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jeecmsv9] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+20-Jul-2018 13:33:44.129 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jeecmsv9] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+20-Jul-2018 13:33:44.130 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jeecmsv9] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+20-Jul-2018 13:33:44.131 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jeecmsv9] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:64)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+20-Jul-2018 13:33:44.242 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:33:44.292 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:33:44.293 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:33:44.293 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:35:41.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 13:35:41.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 13:35:41.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 13:35:41.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 13:35:41.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 13:35:41.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 13:35:41.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 13:35:41.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 13:35:41.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 13:35:41.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:35:41.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:35:41.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 13:35:41.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 13:35:41.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 13:35:41.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:35:41.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 13:35:41.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 13:35:41.282 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 13:35:41.282 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 13:35:41.873 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 13:35:41.989 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:35:42.000 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:35:42.001 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1031 ms
+20-Jul-2018 13:35:42.034 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 13:35:42.034 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 13:35:42.042 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 13:35:53.761 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 13:36:09.006 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 26,963 ms
+20-Jul-2018 13:36:09.010 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 13:36:09.073 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 13:36:09.119 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 27116 ms
+20-Jul-2018 14:25:37.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 14:25:37.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 14:25:37.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 14:25:37.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 14:25:37.368 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:25:37.368 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:25:37.369 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 14:25:37.369 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 14:25:37.370 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 14:25:37.370 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:25:37.370 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:25:37.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 14:25:37.371 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 14:25:37.372 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 14:25:38.073 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 14:25:38.559 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 14:25:38.569 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 14:25:38.573 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1859 ms
+20-Jul-2018 14:25:38.596 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 14:25:38.596 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 14:25:38.609 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 14:26:15.465 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 14:26:37.039 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 58,420 ms
+20-Jul-2018 14:26:37.065 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 14:26:37.119 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 14:26:37.163 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 58588 ms
+20-Jul-2018 14:59:18.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 14:59:18.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:59:18.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 14:59:18.733 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 14:59:18.734 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 14:59:18.734 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 14:59:19.268 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 14:59:19.367 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 14:59:19.376 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 14:59:19.378 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 928 ms
+20-Jul-2018 14:59:19.408 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 14:59:19.408 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 14:59:19.417 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 14:59:30.712 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 14:59:41.145 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 21,728 ms
+20-Jul-2018 14:59:41.151 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 14:59:41.195 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 14:59:41.226 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 21847 ms
+20-Jul-2018 15:01:00.697 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 15:01:00.698 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 15:01:00.698 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:00.699 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:00.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 15:01:00.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 15:01:00.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 15:01:00.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:00.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:00.701 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 15:01:00.701 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 15:01:00.701 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 15:01:01.275 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 15:01:17.552 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 15:01:17.563 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 15:01:17.565 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 17148 ms
+20-Jul-2018 15:01:17.591 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 15:01:17.591 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 15:01:17.599 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 15:01:28.084 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 15:01:28.085 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 15:01:28.086 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 15:01:28.087 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:28.087 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:01:28.087 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 15:01:28.087 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 15:01:28.088 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 15:01:28.647 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 15:01:28.746 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 15:01:28.754 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 15:01:28.757 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 973 ms
+20-Jul-2018 15:01:28.795 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 15:01:28.796 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 15:01:28.804 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 15:01:34.622 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 15:01:44.715 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 15,910 ms
+20-Jul-2018 15:01:44.720 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 15:01:44.767 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 15:01:44.800 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 16040 ms
+20-Jul-2018 15:29:01.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+20-Jul-2018 15:29:01.565 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+20-Jul-2018 15:29:01.565 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+20-Jul-2018 15:29:01.566 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+20-Jul-2018 15:29:01.570 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+20-Jul-2018 15:29:01.571 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+20-Jul-2018 15:29:01.571 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+20-Jul-2018 15:29:01.572 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+20-Jul-2018 15:29:01.573 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+20-Jul-2018 15:29:01.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:29:01.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:29:01.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+20-Jul-2018 15:29:01.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Jul-2018 15:29:01.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+20-Jul-2018 15:29:01.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:29:01.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+20-Jul-2018 15:29:01.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+20-Jul-2018 15:29:01.590 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+20-Jul-2018 15:29:01.598 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+20-Jul-2018 15:29:02.321 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+20-Jul-2018 15:29:02.474 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 15:29:02.485 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 15:29:02.489 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1290 ms
+20-Jul-2018 15:29:02.522 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+20-Jul-2018 15:29:02.523 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+20-Jul-2018 15:29:02.533 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+20-Jul-2018 15:29:25.391 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+20-Jul-2018 15:29:45.380 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 42,846 ms
+20-Jul-2018 15:29:45.389 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+20-Jul-2018 15:29:45.510 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+20-Jul-2018 15:29:45.570 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 43076 ms

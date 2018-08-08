@@ -1,0 +1,31 @@
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.33
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 18 2016 20:31:49 UTC
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.33.0
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_162\jre
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\conf\logging.properties
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\endorsed
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\temp
+03-Aug-2018 09:29:58.668 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.5 using APR version 1.5.1.
+03-Aug-2018 09:29:58.684 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+03-Aug-2018 09:29:59.181 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2g  1 Mar 2016)
+03-Aug-2018 09:30:00.431 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-9977"]
+03-Aug-2018 09:30:00.462 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+03-Aug-2018 09:30:00.462 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 4685 ms
+03-Aug-2018 09:30:00.681 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+03-Aug-2018 09:30:00.681 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.33
+03-Aug-2018 09:30:00.728 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9
+03-Aug-2018 09:30:59.634 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+03-Aug-2018 09:31:42.828 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\tomcatHuXueZhi\jeecmsv9-tomcat-9977\webapps\jeecmsv9 has finished in 102,082 ms
+03-Aug-2018 09:31:42.832 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-9977"]
+03-Aug-2018 09:31:42.914 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+03-Aug-2018 09:31:42.953 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 102482 ms

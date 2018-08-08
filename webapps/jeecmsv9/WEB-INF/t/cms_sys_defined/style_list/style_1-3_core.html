@@ -1,0 +1,64 @@
+[#--
+文字列表
+
+lineHeight：行高；【行高�??
+headMarkImg: 列表头图片；【图片地�?�?
+headMark: 列表头编号；�?1：小黑点�?2：小红点�?3：单箭头�?4：双箭头�?
+bottomLine: 下划线；�?0：无�?1：有】不能为空�??
+dateFormat: 日期格式；�?�java日期格式，如：yyyy-MM-dd�?
+datePosition: 日期位置；�??1：后面左边；2：后面右边；3：前面�?�不能为�?
+ctgForm: 类别；�??0：无�?1：栏目；2：站点�?�不能为�?
+
+showTitleStyle：显示标题样式；�?0：不显示�?1：显示�?�不能为�?
+useShortTitle: 是否使用�?短标题；�?0：不使用�?1：使用�?�不能为�?
+titLen: 标题长度；�?�英文字母按半个计算】为空则不截�?
+target: 是否新窗口打�?；�??0：原窗口�?1：新窗口】不能为�?
+view:访问�? 1总访问量  2 月访问量 3周访问量 4日访问量
+viewTitle:访问量数字之前的描述的词汇（例如：�?�访问量�?
+--]
+<div[#if bottomLine=='1'] class="c1-bline"[/#if][#if lineHeight??] style="padding:${lineHeight}px 0;"[/#if] data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-356" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_list/style_1-3_core.html">[#rt/]
+<div class="f-left">[#rt/]
+[#--列表�?--]
+[#if headMarkImg??]
+<img src="/${res+headMarkImg}" align="middle" class="img-vm" border="0"/> [#rt/]
+[#elseif headMark??]
+<img src="${resSys}/head-mark${headMark}.gif" align="middle" class="img-vm" border="0"/> [#rt/]
+[/#if]
+[#--日期--]
+[#if dateFormat?? && datePosition=='3']
+<span class="${dateClass!}">${ctt.date?string(dateFormat)}</span> [#rt/]
+[/#if]
+[#--类别--]
+[#if ctgForm=='0']
+[#elseif ctgForm='1']
+<a href="${ctt.ctgUrl}" class="${ctgClass!}" target="_blank">[[#if ctt.siteId!=site.id]${channel.name}[#else]${ctt.ctgName}[/#if]]</a>[#rt/]
+[#elseif ctgForm='2']
+<a href="${ctt.siteUrl}" class="${ctgClass!}" target="_blank">[${ctt.siteName}]</a> [#rt/]
+[/#if]
+[#--链接--]
+[#if useShortTitle=='1'][#assign tit=ctt.stit/][#else][#assign tit=ctt.tit/][/#if]
+<a href="${ctt.url}" title="${ctt.tit?html}"[#if (ctt.target?? && ctt.target) || target=='1'] target="_blank"[/#if]>[#rt/]
+[#if showTitleStyle=='1']
+<span style="[#if ctt.titCol?has_content]color:${ctt.titCol};[/#if][#if ctt.titBold]font-weight:bold;[/#if]">[@text_cut s=tit len=titLen append=append/]</span>[#rt/]
+[#else]
+[@text_cut s=tit len=titLen append=append/][#rt/]
+[/#if]
+</a>[#rt/]
+</div>[#rt/]
+[#--日期--]
+[#if dateFormat?? && (datePosition=='1' || datePosition='2')]
+<div class="${dateClass!} [#if datePosition=='1']f-left[#else]f-right[/#if]">[#rt/]
+${ctt.date?string(dateFormat)}[#rt/]
+</div>[#rt/]
+[/#if]
+<div class="${viewClass!}">&nbsp;
+[#if view=='viewTotal'] ${viewTitle!}<script type="text/javascript">putParamIds('view${ctt.id}','${ctt.id}')</script>
+[#elseif view=='viewMonth']${viewTitle!}<script type="text/javascript">putParamIds('view${ctt.id}','${ctt.id}')</script>
+[#elseif view=='viewWeek']${viewTitle!} <script type="text/javascript">putParamIds('view${ctt.id}','${ctt.id}')</script>
+[#elseif view=='viewDay'] ${viewTitle!}<script type="text/javascript">putParamIds('view${ctt.id}','${ctt.id}')</script>
+[/#if]
+<span id="view${ctt.id}"></span>
+</div>
+[#--清除浮动--]
+<div class="clear"></div>[#rt/]
+</div>

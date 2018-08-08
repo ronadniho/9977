@@ -1,0 +1,21 @@
+[#--
+栏目翻页样式
+
+pageClass: 翻页DIV class
+pageStyle: 翻页DIV style
+--]
+[#assign p=tag_pagination/]
+<div[#if pageClass??] class="${pageClass}"[/#if][#if pageStyle??] style="${pageStyle}"[/#if] data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-370" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_page/channel_1.html">
+�?${p.totalCount}条记�? ${p.pageNo}/${p.totalPage}�?
+[#if p.firstPage]&nbsp;<a disabled="disabled">首页</a> <a disabled="disabled">上一�?</a>[#t/]
+[#else]&nbsp;<a href="#" onclick="location.href=encodeURI('${hrefFormer}${hrefLatter}');">首页</a> <a href="#" onclick="location.href=encodeURI('${hrefFormer}[#if p.prePage gt 1]_${p.prePage}[/#if]${hrefLatter}');">上一�?</a>[#t/]
+[/#if]
+[#if p.lastPage]&nbsp;<a disabled="disabled">下一�?</a> <a disabled="disabled">尾页</a>
+[#else]&nbsp;<a href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.nextPage}${hrefLatter}');">下一�?</a> <a href="#" onclick="location.href=encodeURI('${hrefFormer}_${p.totalPage}${hrefLatter}');">尾页</a>
+[/#if]
+&nbsp;�?<select onChange="if(this.value==1){location.href=encodeURI('${hrefFormer}${hrefLatter}')}else{location.href=encodeURI('${hrefFormer}_'+this.value+'${hrefLatter}')}this.disabled='disabled'">
+[#list 1..p.totalPage as i]
+  <option value="${i}" [#if p.pageNo==i]selected="selected"[/#if]>${i}</option>
+[/#list]
+</select>�?
+</div>

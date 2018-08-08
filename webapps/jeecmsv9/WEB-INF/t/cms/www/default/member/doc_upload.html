@@ -1,0 +1,27 @@
+<script type="text/javascript" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-115" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/default/member/doc_upload.html">
+//上传附件
+function uploadDoc(n) {
+	var af = $('#docFile'+n);
+	//�?查是否�?�择了文�?
+	if(af.val()=='') {
+		alert('请�?�择文件');
+		return;
+	}
+	//将file移动至上传表�?
+	$('#docContent').empty();
+	$('#docContent').append(af);
+	//复制�?个file放至原处
+	$('#afc'+n).append(af.clone().attr('value',''));
+	$('#docText'+n).attr('value','');
+	//修改属�??
+	af.attr('id','');
+	//其他表单
+	$('#docNum').val(n);
+	$('#docForm').submit();
+}
+</script>
+<form id="docForm" action="doc_upload.jspx" method="post" enctype="multipart/form-data" target="doc_iframe" style="display:none;width:0px;height:0px;">
+<span id="docContent"></span>
+<input type="hidden" id="docNum" name="docNum"/>
+</form>
+<iframe name="doc_iframe" frameborder="0" border="0" style="display:none;width:0px;height:0px;"></iframe>

@@ -1,0 +1,40 @@
+[#--
+图文列表或标题列表向上滚�?
+
+rollDisplayHeight: 显示区域高度；�?�按像素px计算】不能为�?
+rollLineHeight: 滚动区行高；【按像素px计算】不能为�?
+rollCols: 滚动列数；�?�一行中包含几列】不能为�?
+rollSpeed: 滚动速度；�?�滚动�?�度，�?�越小越快，�?小为1】不能为�?
+rollSleepTime: 滚动停顿时间；�?��?�越大停顿越久�?�不能为�?
+rollRows: 滚动行数；�?�一个滚动周期滚动的行数】不能为�?
+rollSpan: 滚动跨度；�?�一次滚动的像素，跨度越大，滚动就越快，但越不流畅�?�不能为�?
+isSleep: 是否停顿；�??0：停顿；1：停顿�?�不能为�?
+--]
+[#assign picFloat='0'/]
+[#assign RLID][@uuid/][/#assign]
+<div id="roll-${RLID}"[#if cssClass??] class="${cssClass}"[/#if] style="overflow:hidden;height:${rollDisplayHeight}px;${cssStyle!}" onmouseover="clearInterval(proll${RLID}.pevent)" onmouseout="proll${RLID}.pevent=setInterval(function(){proll${RLID}.roll.call(proll${RLID})},proll${RLID}.speed)" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-358" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms_sys_defined/style_list/style_2-1_core.html">
+	<div id="roll-orig-${RLID}">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		[#assign tableCellCount = tag_list?size]
+		[#if tableCellCount<rollCols]
+			[#assign tableCellCount = rollCols/]
+		[#elseif tableCellCount%rollCols != 0]
+			[#assign tableCellCount = tableCellCount+(rollCols-tableCellCount%rollCols)/]
+		[/#if]
+		[#list 0..tableCellCount-1 as i]
+		[#if i%rollCols==0]<tr>[/#if]<td height="${rollLineHeight}"[#if i==0] id="roll-line-${RLID}"[/#if][#if i<rollCols] width="${100/rollCols}%"[/#if]">[#rt/]
+			[#if i gte tag_list?size]
+			&nbsp;[#t/]
+			[#else]
+				[#assign ctt=tag_list[i]/]
+				[#include style_core/][#t/]
+			[/#if]
+		</td>[#if i%rollCols==rollCols-1]</tr>[/#if][#lt/]
+		[/#list]
+		</table>
+	</div>
+	<div id="roll-copy-${RLID}"></div>
+</div>
+<script type="text/javascript">
+var proll${RLID}=new Cms.UpRoller("${RLID}",${rollSpeed},[#if isSleep=="1"]true[#else]false[/#if],${rollSleepTime},${rollRows},${rollSpan},${rollLineHeight});
+</script>

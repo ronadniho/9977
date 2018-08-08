@@ -1,0 +1,16 @@
+<div class="gotop" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-247" data-genuitec-path="/jeecmsv9/src/main/webapp/WEB-INF/t/cms/www/mobile/include/gotop.html"><a href="#"></a></div>
+<script>
+    function getTop(){
+        var top = $(document).scrollTop();
+        if($(document).scrollTop()>200){
+            $(".gotop").css({
+                'display':'block',
+            });
+        } else {
+            $(".gotop").css('display','none');
+        }
+        setTimeout(getTop);
+    }
+     
+    getTop();
+</script>
